@@ -1,6 +1,6 @@
 # MovingAverage
-MovingAverage library for Arduino or Wiring
-by Sofian Audry
+MovingAverage library for Arduino or Wiring   
+by Sofian Audry  
 Inspired by code by [Karsten Kutza](http://www.ip-atlas.com/pub/nap/nn-src/bpn.txt)
 
 A memory-efficient [exponential moving average](https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average) library.
@@ -73,7 +73,12 @@ The second parameter allows to set the starting value of the moving average (def
 
 ### update(value)
 
-Updates the moving average with new value (also returns the current value).
+Updates the moving average with new value.
+```arduino
+average.update( analogRead(0) );
+```
+
+The function also returns the current value (optional):
 ```arduino
 float value = average.update( analogRead(0) );
 Serial.println(value);
