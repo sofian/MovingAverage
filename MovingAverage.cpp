@@ -32,7 +32,7 @@
 MovingAverage::MovingAverage(float alphaOrN, real startValue) : _value(startValue) {
   alphaOrN = max(alphaOrN, 0); // make sure alphaOrN >= 0
   _alpha = (alphaOrN > 1 ?
-      2 / (alphaOrN - 1) :
+      2 / (alphaOrN + 1) :
       alphaOrN);
 }
 
