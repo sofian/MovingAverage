@@ -46,7 +46,7 @@ typedef float real;
    * - if > 1 then it's used as the "number of items that are considered from the past" (*)
    * (*) Of course this is an approximation. It actually sets the alpha value to 2 / (n - 1)
    */
-  MovingAverage(float alphaOrN, real startValue);
+  MovingAverage(float alphaOrN, real startValue=0);
   virtual ~MovingAverage() {}
 
   /**
