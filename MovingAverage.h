@@ -1,11 +1,10 @@
 /*
  * MovingAverage.h
  *
- * Tool for moving averages.
+ * An exponential moving average class for Arduino/Wiring.
  *
- * This file is part of Qualia https://github.com/sofian/qualia
- *
- * (c) 2011 Sofian Audry -- info(@)sofianaudry(.)com
+ * (c) 2011-2015 Sofian Audry -- info(@)sofianaudry(.)com
+ * Adapted from the Qualia library: https://github.com/sofian/qualia
  * Inspired by code by Karsten Kutza
  * http://www.ip-atlas.com/pub/nap/nn-src/bpn.txt
  *
