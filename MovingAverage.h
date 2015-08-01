@@ -24,11 +24,15 @@
 #ifndef MOVINGAVERAGE_H_
 #define MOVINGAVERAGE_H_
 
-#include <qualia/core/common.h>
-
 /// An exponential moving average class.
 class MovingAverage {
 public:
+#ifdef MOVINGAVERAGE_USE_DOUBLE
+typedef double real;
+#else
+typedef float real;
+#endif
+
   // The alpha (mixing) variable (in [0,1]).
   float _alpha;
 

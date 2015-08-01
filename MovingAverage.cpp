@@ -30,7 +30,7 @@
 #include "MovingAverage.h"
 
 MovingAverage::MovingAverage(float alphaOrN, real startValue) : _value(startValue) {
-  Q_ASSERT_ERROR(alphaOrN >= 0);
+  alphaOrN = max(alphaOrN, 0); // make sure alphaOrN >= 0
   _alpha = (alphaOrN > 1 ?
       2 / (alphaOrN - 1) :
       alphaOrN);
@@ -40,6 +40,6 @@ void MovingAverage::reset(real startValue) {
   _value = startValue;
 }
 
-real MovingAverage::update(real v) {
+MovingAverage::real MovingAverage::update(real v) {
   return (_value -= _alpha * (_value - v));
 }
