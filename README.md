@@ -3,7 +3,13 @@ MovingAverage library for Arduino or Wiring
 by Sofian Audry  
 Inspired by code by [Karsten Kutza](http://www.ip-atlas.com/pub/nap/nn-src/bpn.txt)
 
-A memory-efficient [exponential moving average](https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average) library.
+A memory-efficient [exponential moving average](https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average) library. A moving average is a simple way of *smoothing* a signal. By adjusting a parameter called a weighting coefficient, it is possible to control the degree of smoothing, making the signal more or less reactive to changes.
+
+Similar and alternative libraries:
+* [Microsmooth](https://github.com/AsheeshR/Microsmooth) A lightweight and fast signal smoothing library for Arduino. Provides many sorts kinds of smoothing algorithm through a function-based API.
+* [Arduino Signal Filtering Library](https://jeroendoggen.github.io/Arduino-signal-filtering-library) Provides a framework and classes for different kinds of low-pass signal filters and median filter.
+* [RunningAverage](http://playground.arduino.cc/Main/RunningAverage) A library for computing a simple moving average (SMA) over a time window.
+* [RunningMedian](http://playground.arduino.cc/Main/RunningMedian) A library for computing the running median over a time window.
 
 ## Repository
 
@@ -12,6 +18,7 @@ http://github.com/sofian/MovingAverage
 Download the latest version here : https://github.com/sofian/MovingAverage/archive/master.zip
 
 ## Installation
+
 Copy the MovingAverage folder to your Arduino libraries folder.
 
 
