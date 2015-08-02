@@ -47,7 +47,6 @@ typedef float real;
    * (*) Of course this is an approximation. It actually sets the alpha value to 2 / (n - 1)
    */
   MovingAverage(float alphaOrN=0.1, real startValue=0);
-  virtual ~MovingAverage() {}
 
   /**
    * Resets the moving average to #startValue#.
