@@ -104,3 +104,28 @@ Resets the moving average to given value.
 reset( 0.5 );
 Serial.println( average.get() ); // will print "0.5"
 ```
+
+It is generally recommended to initialize the moving average with an unbiased sample from the distribution in the setup() method. Example:
+
+```arduino
+reset( analogRead(0) );
+```
+
+### reset(function) (ADVANCED)
+
+For small alpha values, initializing the moving average with a single value from the distribution might be tricky because the chain will not have the time to converge. The library provides a simple solution to that in the form of an "auto-reset" method. Calling it with pointer to the function that returns elements from the distribution you want to compute the average on, it will first perform a certain number of readings from the distribution and compute the average in order to set the initial value. The function will be called M times where M = ceil(1/alpha - 1).
+
+Source: http://www.had2know.com/finance/exponential-moving-average-ema-calculator.html
+
+```arduino
+MovingAverage average(0.01);
+
+float readInput() {
+  return analogRead(0);
+}
+...
+// Will perform the initialization, calling readInput() 99 times (1/0.01 - 1) 
+// and taking he average to set the initial value.
+reset( readInput );
+```
+

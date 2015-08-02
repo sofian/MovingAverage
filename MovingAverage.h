@@ -55,6 +55,13 @@ typedef float real;
   void reset(real startValue);
 
   /**
+   * This function will reset the moving average with an appropriate value, waiting for convergence.
+   * It is especially useful for small alpha values. Call it with a pointer to a function that returns
+   * the value that you want.
+   */
+  void reset(real (*valueFunc)(void));
+ 
+  /**
    * Updates the moving average with new value #v# (also returns the current value).
    */
   real update(real v);
