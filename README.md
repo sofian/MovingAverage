@@ -40,7 +40,8 @@ void setup() {
 void loop() {
   // Update the value moving average with new analog reading and print the 
   // moving average's current value.
-  Serial.println( average.update( analogRead(0) ) );
+  average.update( analogRead(0) );
+  Serial.println( average.get() );
 }
 
 ```
